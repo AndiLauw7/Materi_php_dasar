@@ -3,6 +3,7 @@ require "./functions/shop.php";
 // require "./data/products.php";
 $dataProduts = file_get_contents("./data/products.json");
 $products = json_decode($dataProduts, true);
+
 $saldo = 150000;
 // $keranjang = ["Laptop", "Mouse"];
 $keranjang = $_POST["keranjang"] ?? [];
@@ -90,9 +91,31 @@ $stokAman = cekStok($products, $keranjang, $qty);
                 <?php else:
                     $products = updateStok($products, $keranjang, $qty);
                     $jsonBaru = json_encode($products);
-                    file_put_contents("./data/products.json", $jsonBaru);  ?>
+                    file_put_contents("./data/products.json", $jsonBaru);
+                    $dataTransactions = file_get_contents("./data/transactions.json");
+                    $transactions = json_decode($dataTransactions, true);
+                    $daftarItem = [];
+                    foreach ($keranjang as $item) {
+                        foreach ($products as $product) {
+                            $item == $product["nama"] ? array_push($daftarItem, $product) : null;
+                        }
+                    }
+                    $transaksiBaru = [
+                        "tglTransaksi" => date("Y-m-d"),
+                        "subtotal" => $subTotal,
+                        "diskon" => $diskon,
+                        "ongkir" => $ongkir,
+                        "total" => $totalBayar,
+                        "daftarItem" => $daftarItem
+                    ];
+                    array_push($transactions, $transaksiBaru);
+                    $dataTransaksi = json_encode($transactions);
+                    file_put_contents("./data/transactions.json", $dataTransaksi);
+                ?>
+
 
                     <div class="success">Checkout berhasil</div>
+
                 <?php endif; ?>
                 <!-- <p>Sisa Saldo : <?php echo $saldoSekarang; ?></p> -->
             <?php endif; ?>

@@ -1,0 +1,42 @@
+[
+  {
+    "total": 0,
+    "tglTransaksi": "",
+    "daftarItem": [{ "nama": "", "harga": 0, "qty": 0, "totalItem": 0 }],
+    "subTotal": 0,
+    "diskon": 0,
+    "ongkir": 0
+  },
+  {
+    "tglTransaksi": "2026-05-08",
+    "subtotal": 100000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 110000,
+    "daftarItem": ["Laptop"]
+  },
+  {
+    "tglTransaksi": "2026-05-08",
+    "subtotal": 100000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 110000,
+    "daftarItem": ["Laptop"]
+  },
+  {
+    "tglTransaksi": "2026-05-08",
+    "subtotal": 100000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 110000,
+    "daftarItem": [{ "nama": "Laptop", "harga": 100000, "stok": 6 }]
+  },
+  {
+    "tglTransaksi": "2026-05-08",
+    "subtotal": 100000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 110000,
+    "daftarItem": [{ "nama": "Laptop", "harga": 100000, "stok": 5 }]
+  }
+]
