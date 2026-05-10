@@ -1,6 +1,5 @@
 <?php
 require "./functions/shop.php";
-// require "./data/products.php";
 $dataProduts = file_get_contents("./data/products.json");
 $products = json_decode($dataProduts, true);
 
@@ -20,7 +19,7 @@ $stokAman = cekStok($products, $keranjang, $qty);
 <html>
 
 <head>
-    <title>Toko Andi</title>
+    <title>Toko Kami</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -54,6 +53,9 @@ $stokAman = cekStok($products, $keranjang, $qty);
                 <?php endforeach;  ?>
             </div>
             <button type="submit">Checkout</button>
+            <a href="./history.php" style="display: inline-block; padding: 5px 5px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-family: sans-serif;">
+                History
+            </a>
             <?php if (!empty($keranjang)): ?>
                 <div class="summary">
                     <div>
@@ -97,7 +99,17 @@ $stokAman = cekStok($products, $keranjang, $qty);
                     $daftarItem = [];
                     foreach ($keranjang as $item) {
                         foreach ($products as $product) {
-                            $item == $product["nama"] ? array_push($daftarItem, $product) : null;
+                            // $item == $product["nama"] ? array_push($daftarItem, $product) : null;
+                            if ($item == $product["nama"]) {
+                                $jumlah = $qty[$product["nama"]] ?? 0;
+                                $totalItem = $product["harga"] * $jumlah;
+                                $daftarItem[] = [
+                                    "nama" => $product["nama"],
+                                    "harga" => $product["harga"],
+                                    "jumlah" => $jumlah,
+                                    "totalItem" => $totalItem
+                                ];
+                            }
                         }
                     }
                     $transaksiBaru = [
@@ -112,10 +124,7 @@ $stokAman = cekStok($products, $keranjang, $qty);
                     $dataTransaksi = json_encode($transactions);
                     file_put_contents("./data/transactions.json", $dataTransaksi);
                 ?>
-
-
                     <div class="success">Checkout berhasil</div>
-
                 <?php endif; ?>
                 <!-- <p>Sisa Saldo : <?php echo $saldoSekarang; ?></p> -->
             <?php endif; ?>

@@ -1,42 +1,131 @@
 [
   {
-    "total": 0,
-    "tglTransaksi": "",
-    "daftarItem": [{ "nama": "", "harga": 0, "qty": 0, "totalItem": 0 }],
-    "subTotal": 0,
-    "diskon": 0,
-    "ongkir": 0
-  },
-  {
-    "tglTransaksi": "2026-05-08",
-    "subtotal": 100000,
-    "diskon": 0,
-    "ongkir": 10000,
-    "total": 110000,
-    "daftarItem": ["Laptop"]
-  },
-  {
-    "tglTransaksi": "2026-05-08",
-    "subtotal": 100000,
-    "diskon": 0,
-    "ongkir": 10000,
-    "total": 110000,
-    "daftarItem": ["Laptop"]
-  },
-  {
-    "tglTransaksi": "2026-05-08",
-    "subtotal": 100000,
-    "diskon": 0,
-    "ongkir": 10000,
-    "total": 110000,
-    "daftarItem": [{ "nama": "Laptop", "harga": 100000, "stok": 6 }]
-  },
-  {
     "tglTransaksi": "2026-05-08",
     "subtotal": 100000,
     "diskon": 0,
     "ongkir": 10000,
     "total": 110000,
     "daftarItem": [{ "nama": "Laptop", "harga": 100000, "stok": 5 }]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 100000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 110000,
+    "daftarItem": [
+      { "nama": "Laptop", "harga": 100000, "jumlah": "1", "totalItem": 100000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 150000,
+    "diskon": 15000,
+    "ongkir": 10000,
+    "total": 145000,
+    "daftarItem": [
+      { "nama": "Laptop", "harga": 100000, "jumlah": "1", "totalItem": 100000 },
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
+  },
+  {
+    "tglTransaksi": "2026-05-10",
+    "subtotal": 50000,
+    "diskon": 0,
+    "ongkir": 10000,
+    "total": 60000,
+    "daftarItem": [
+      { "nama": "Mouse", "harga": 50000, "jumlah": "1", "totalItem": 50000 }
+    ]
   }
 ]
