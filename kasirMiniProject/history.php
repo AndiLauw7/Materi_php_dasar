@@ -25,17 +25,9 @@ $transactions = json_decode($dataTransactions, true);
             <p>Harga : <?php echo $item["harga"] ?></p>
             <p>Qty : <?php echo $item["jumlah"] ?? 0 ?></p>
             <p>Total Item : <?php echo $item["totalItem"] ?? 0 ?></p>
-            <!-- <?php if (is_array($item)): ?> -->
-            <!-- Jika $item adalah Array (Data Benar) -->
-            <!-- <p>Nama Item : <?php echo $item["nama"] ?? '-' ?></p> -->
-            <!-- <p>Harga : <?php echo $item["harga"] ?? 0 ?></p> -->
-            <!-- <p>Qty : <?php echo $item["jumlah"] ?? ($item["qty"] ?? 0) ?></p> -->
-            <!-- <p>Total Item : <?php echo $item["totalItem"] ?? 0 ?></p> -->
-            <!-- <?php else: ?> -->
-            <!-- Jika $item hanya String (Data Rusak/Lama) -->
-            <p>Nama Item : <?php echo $item; ?></p>
-            <!-- <p style="color: red; font-size: 0.8em;">*Data detail tidak lengkap</p>  -->
-            <!-- <?php endif; ?>  -->
+            <a href="./invoice.php?id=<?php echo $transaction["id"] ?>" style="display: inline-block; padding: 5px 5px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-family: sans-serif;">
+                Lihat Detail
+            </a>
         <?php endforeach; ?>
     <?php endforeach; ?>
 

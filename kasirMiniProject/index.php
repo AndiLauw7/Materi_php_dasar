@@ -96,6 +96,8 @@ $stokAman = cekStok($products, $keranjang, $qty);
                     file_put_contents("./data/products.json", $jsonBaru);
                     $dataTransactions = file_get_contents("./data/transactions.json");
                     $transactions = json_decode($dataTransactions, true);
+                    $jumlahTransaksi = count($transactions);
+                    $idbaru = $jumlahTransaksi + 1;
                     $daftarItem = [];
                     foreach ($keranjang as $item) {
                         foreach ($products as $product) {
@@ -113,6 +115,7 @@ $stokAman = cekStok($products, $keranjang, $qty);
                         }
                     }
                     $transaksiBaru = [
+                        "id" => $idbaru,
                         "tglTransaksi" => date("Y-m-d"),
                         "subtotal" => $subTotal,
                         "diskon" => $diskon,
@@ -120,6 +123,7 @@ $stokAman = cekStok($products, $keranjang, $qty);
                         "total" => $totalBayar,
                         "daftarItem" => $daftarItem
                     ];
+
                     array_push($transactions, $transaksiBaru);
                     $dataTransaksi = json_encode($transactions);
                     file_put_contents("./data/transactions.json", $dataTransaksi);
