@@ -30,8 +30,6 @@ $transactions = json_decode($dataTransactions, true);
             </a>
         <?php endforeach; ?>
     <?php endforeach; ?>
-
-
 </body>
 
 </html>
